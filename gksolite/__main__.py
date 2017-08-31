@@ -53,7 +53,7 @@ def load_board(board_name, *padding):
 
 def load_random_board(*padding):
     pattern = 'GLIDER' # choosen absolutly randomly
-    return load_board(random.choice(patterns.PATTERNS), padding)
+    return load_board(random_pattern(), padding)
 
 def load_gol(module_name):
     __import__(module_name)
@@ -84,7 +84,7 @@ CLI.add_argument(
     '-c', '--class',
     dest='gol_class',
     help='GOL implementation',
-    default='gksol.sparse',
+    default='gksolite.sparse',
 )
 CLI_BOARD = CLI.add_argument_group('Board settings')
 CLI_BOARD.add_argument(
