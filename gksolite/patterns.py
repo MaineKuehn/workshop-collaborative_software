@@ -83,11 +83,20 @@ BASELINE = pad("""\
 ######## #####   ###      ####### #####
 """)
 
+
+HEART = pad("""\
+    #      #
+  #   #  #   #
+   #   #    #
+     #    #
+       #
+""")
+
 RANDOM = pad('\n'.join([''.join([random.choice(['#', ' ']) for i in range(100)]) for j in range(100)]))
 
 PATTERNS = [
     'BLOCK', 'BLINKER', 'BLINKER3', 'PULSAR', 'PENTADECATHLON', 'PINWHEEL', 'GLIDER', 'DIEHARD', 'GLIDER_GUN',
-    'PENTOMINO', 'RANDOM'
+    'PENTOMINO', 'HEART' ,'RANDOM'
 ]
 
 __all__ = PATTERNS[:]
