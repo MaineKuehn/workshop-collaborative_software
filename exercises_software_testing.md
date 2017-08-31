@@ -3,7 +3,7 @@
 * Check the current test coverage of `gksolite` (you might also check your coding style with [pylint](https://pylint.readthedocs.io/en/latest/))
 
 
-	$ coverage run my_program.py arg1 arg2
+	$ coverage run my_unit_test.py arg1 arg2
 	$ coverage report
 	# For nicer reports you can use
 	$ coverage html
