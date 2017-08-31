@@ -7,4 +7,5 @@ python:
 os:
   - linux
   
-script: setup.py test
+script: 
+  - coverage run setup.py test
