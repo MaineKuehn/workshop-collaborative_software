@@ -14,7 +14,7 @@ if __name__ == '__main__':
         long_description=long_description.strip(),
         author="Eileen Kuehn, Max Fischer",
         author_email='maxfischer2781@gmail.com',
-        url='https://github.com/MaineKuehn/workshop-advanced_python/blob/master/gksol/boards.py',
+        url='https://github.com/MaineKuehn/workshop-collaborative_software',
         packages=find_packages(),
         # metadata for package search
         license='MIT',
