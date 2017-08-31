@@ -81,9 +81,17 @@ BASELINE = pad("""\
 ######## #####   ###      ####### #####
 """)
 
+HEART = pad("""\
+    #      #
+  #   #  #   #
+   #   #    #
+     #    #
+       #
+""")
+
 PATTERNS = [
     'BLOCK', 'BLINKER', 'BLINKER3', 'PULSAR', 'PENTADECATHLON', 'PINWHEEL', 'GLIDER', 'DIEHARD', 'GLIDER_GUN',
-    'PENTOMINO'
+    'PENTOMINO', 'HEART'
 ]
 
 __all__ = PATTERNS[:]
