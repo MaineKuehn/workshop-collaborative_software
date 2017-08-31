@@ -46,7 +46,7 @@ def load_board(board_name, *padding):
 
 def load_random_board(*padding):
     pattern = 'GLIDER' # choosen absolutly randomly
-    load_board(random.choice(patterns.PATTERNS), padding)
+    return load_board(random.choice(patterns.PATTERNS), padding)
 
 def load_gol(module_name):
     __import__(module_name)
@@ -54,7 +54,8 @@ def load_gol(module_name):
 
 
 def main(options):
-    board = load_board(options.board, *options.padding)
+    #board = load_board(options.board, *options.padding)
+    board = load_random_board(*options.padding)
     gol_class = load_gol(options.gol_class)
     gol = gol_class(board)
     display = getattr(render, options.renderer)()
