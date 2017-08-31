@@ -27,12 +27,12 @@
 * Code gets worse over time
 * Code gets worse with number of developers <!-- .element: class="fragment" -->
 
-Instead, every time you look at a piece of code, improve a bit
+Instead, every time you look at a piece of code, improve it a bit <!-- .element: class="fragment" -->
 
-* Refactoring of names of variables or methods
-* Shortening of methods that are too complex/long
-* Deduplicate code 
-* ...
+* Refactoring of names of variables or methods <!-- .element: class="fragment" -->
+* Shortening of methods that are too complex/long <!-- .element: class="fragment" -->
+* Deduplicate code <!-- .element: class="fragment" -->
+* ... <!-- .element: class="fragment" -->
 
 --
 
