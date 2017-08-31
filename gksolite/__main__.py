@@ -53,7 +53,7 @@ def load_board(board_name, *padding):
 
 def load_random_board(*padding):
     pattern = 'GLIDER' # choosen absolutly randomly
-    return load_board(random_pattern(), padding)
+    return load_board(random_pattern(), *padding)
 
 def load_gol(module_name):
     __import__(module_name)
