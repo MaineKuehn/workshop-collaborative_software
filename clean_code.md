@@ -96,3 +96,20 @@ Instead, every time you look at a piece of code, improve a bit
 	    p = PersonalDataFormItem({'id':'personalHomepage', 'name': "Personal homepage", 'input':'text', 'mandatory':False})
 	    self._data[p.getId()] = p
 	    self._sortedKeys.append(p.getId())
+
+--
+
+## What is wrong here? (3)
+
+	def setConference( self, params ):
+        if not ("confId" in params.keys()) and "confid" in params.keys():
+            params["confId"] = params["confid"]
+        if not ("confId" in params.keys()) and "conference" in params.keys():
+            params["confId"] = params["conference"]
+        if isinstance(params.get("confId", ""), list):
+            params["confId"] = params["confId"][0]
+        if not ("confId" in params.keys()) or \
+           params["confId"] == None or \
+               params["confId"].strip()=="":
+            raise errors.MaKaCError( _("conference id not set"))
+        self.__confId = params["confId"]
