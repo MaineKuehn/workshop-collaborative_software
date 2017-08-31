@@ -1,6 +1,7 @@
 import sys
 import argparse
 import time
+import random
 
 from . import patterns
 from . import reader
@@ -43,6 +44,9 @@ def load_board(board_name, *padding):
     raw_board = reader.read_literal(board_literal)
     return boards.PaddedBoard(raw_board, **kwargs)
 
+def load_random_board(*padding):
+    pattern = 'GLIDER' # choosen absolutly randomly
+    load_board(random.choice(patterns.PATTERNS), padding)
 
 def load_gol(module_name):
     __import__(module_name)
