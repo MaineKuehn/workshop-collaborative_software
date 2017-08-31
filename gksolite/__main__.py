@@ -1,6 +1,7 @@
 import sys
 import argparse
 import time
+import random
 
 from . import patterns
 from . import reader
@@ -50,6 +51,8 @@ def load_gol(module_name):
 
 
 def main(options):
+    if options.board == 'RANDOM':
+        options.board = random.choice(patterns.PATTERNS)	
     board = load_board(options.board, *options.padding)
     gol_class = load_gol(options.gol_class)
     gol = gol_class(board)
