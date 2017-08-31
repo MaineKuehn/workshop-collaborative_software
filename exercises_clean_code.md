@@ -7,7 +7,7 @@
 
 * Get in contact with the golm nameserver
 	* Check out its API of our fork from https://MaineKuehn.github.io/golm in the provided [GKS-2017_CollaborativeSoftware Organisation](https://github.com/orgs/GKS-2017-CollaborativeSoftware/dashboard)
-	* Start `golm` and `gkslite` at your VM
+	* Start `golm` and `gksolite` at your VM
 
 --
 
