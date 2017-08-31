@@ -75,6 +75,16 @@
 
 --
 
+## About those comments...
+
+If you start to write a comment, stop and think about your design.
+
+If you still want to write that comment, **think harder**!
+
+If it contains a reference to a specific algorithm you are just implementing, everything is fine. Otherwise, get off the keyboard and try again ;)
+
+--
+
 ## Pants down
 
 Did you write proper documentation when you implemented your features in `gksolite`?
