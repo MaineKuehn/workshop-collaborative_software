@@ -1,7 +1,7 @@
 import unittest
-import gksol.patterns
-import gksol.boards
-import gksol.plain
+import gksolite.patterns
+import gksolite.boards
+import gksolite.plain
 import random
 
 
@@ -9,7 +9,7 @@ class Mixin(object):
     """Container class to shield Mixins from top level namespace where ``unittest`` would run them"""
     class GolMixin(unittest.TestCase):
         """Standard tests for the Game of Life board interface"""
-        gol_cls = gksol.plain.ListGol
+        gol_cls = gksolite.plain.ListGol
 
         @staticmethod
         def _gol_to_list(gol_board):
@@ -26,11 +26,11 @@ class Mixin(object):
                     self.assertIsInstance(self.gol_cls(board), self.gol_cls)
 
         def test_init_board(self):
-            """initialize with gksol.boards.PaddedBoard"""
-            for pattern_name in gksol.patterns.PATTERNS:
+            """initialize with gksolite.boards.PaddedBoard"""
+            for pattern_name in gksolite.patterns.PATTERNS:
                 for padding in ({}, {'top': 20}, {'left': 30}, {'top': 10, 'bottom': 12, 'left': 15, 'right': 37}):
-                    board = gksol.boards.PaddedBoard(
-                        getattr(gksol.patterns, pattern_name),
+                    board = gksolite.boards.PaddedBoard(
+                        getattr(gksolite.patterns, pattern_name),
                         **padding
                     )
                     self.assertIsInstance(self.gol_cls(board), self.gol_cls)
