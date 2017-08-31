@@ -50,7 +50,7 @@
 
 ## Documentation First
 
-* A recipe for API success (to notes)
+* A recipe for API success
 * Makes you think about your layouts
 
 --
