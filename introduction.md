@@ -20,6 +20,10 @@ https://xkcd.com/1421/
 
 --
 
+# Workshop on *Collaborative Software Development*
+
+--
+
 # Disclaimer
 
 * There is too much of topics we could cover here
