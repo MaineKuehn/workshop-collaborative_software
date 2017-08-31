@@ -26,6 +26,13 @@ def board_help():
         )
 
 
+def random_pattern():
+    list_of_all_patterns = patterns.PATTERNS
+    chosen_pattern = random.choice(list_of_all_patterns)
+    print("choosen pattern: ",chosen_pattern) 
+    return chosen_pattern
+
+
 def load_board(board_name, *padding):
     if not board_name:
         board_help()
@@ -39,7 +46,7 @@ def load_board(board_name, *padding):
         else:
             direction, amount = pad[0], pad[1:]
             kwargs[cli_arg_map[direction]] = float(amount) if amount == 'inf' else int(amount)
-    board_literal = getattr(patterns, board_name, board_name)
+    board_literal = getattr(patterns, random_pattern(), board_name)
     raw_board = reader.read_literal(board_literal)
     return boards.PaddedBoard(raw_board, **kwargs)
 

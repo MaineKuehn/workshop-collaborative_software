@@ -26,7 +26,7 @@ class Mixin(object):
                     self.assertIsInstance(self.gol_cls(board), self.gol_cls)
 
         def test_init_board(self):
-            """initialize with gmksolite.boards.PaddedBoard"""
+            """initialize with gksolite.boards.PaddedBoard"""
             for pattern_name in gksolite.patterns.PATTERNS:
                 for padding in ({}, {'top': 20}, {'left': 30}, {'top': 10, 'bottom': 12, 'left': 15, 'right': 37}):
                     board = gksolite.boards.PaddedBoard(
