@@ -1,6 +1,7 @@
 import sys
 import argparse
 import time
+import random
 
 from . import patterns
 from . import reader
@@ -50,6 +51,9 @@ def load_board(board_name, *padding):
     raw_board = reader.read_literal(board_literal)
     return boards.PaddedBoard(raw_board, **kwargs)
 
+def load_random_board(*padding):
+    pattern = 'GLIDER' # choosen absolutly randomly
+    return load_board(random_pattern(), *padding)
 
 def load_gol(module_name):
     __import__(module_name)
@@ -57,7 +61,8 @@ def load_gol(module_name):
 
 
 def main(options):
-    board = load_board(options.board, *options.padding)
+    #board = load_board(options.board, *options.padding)
+    board = load_random_board(*options.padding)
     gol_class = load_gol(options.gol_class)
     gol = gol_class(board)
     display = getattr(render, options.renderer)()
@@ -79,7 +84,7 @@ CLI.add_argument(
     '-c', '--class',
     dest='gol_class',
     help='GOL implementation',
-    default='gksol.sparse',
+    default='gksolite.sparse',
 )
 CLI_BOARD = CLI.add_argument_group('Board settings')
 CLI_BOARD.add_argument(

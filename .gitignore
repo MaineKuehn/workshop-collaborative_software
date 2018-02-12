@@ -1,0 +1,5 @@
+.idea
+build/
+dist/
+gksolite/__pycache__
+gksolite.egg-info
